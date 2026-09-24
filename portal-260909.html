@@ -134,11 +134,11 @@
             </div>
             <div class="flex items-start gap-4">
               <div class="w-8 h-8 rounded-full bg-[#8b5cf6]/20 flex items-center justify-center flex-shrink-0"><span class="text-sm font-black text-[#8b5cf6]">2</span></div>
-              <p class="text-sm font-semibold text-white leading-8">Set your password by clicking your avatar.</p>
+              <p class="text-sm font-semibold text-white leading-8">アバターをクリックして、パスワードを設定してください。</p>
             </div>
             <div class="flex items-start gap-4">
               <div class="w-8 h-8 rounded-full bg-[#8b5cf6]/20 flex items-center justify-center flex-shrink-0"><span class="text-sm font-black text-[#8b5cf6]">3</span></div>
-              <p class="text-sm font-semibold text-white leading-8">Now you can log in on both sites using your email address and password!</p>
+              <p class="text-sm font-semibold text-white leading-8">これで、あなたのメールアドレスとパスワードを使って、両方のサイトにログインできるようになりました！</p>
             </div>
           </div>
           <button onclick="App.closeSignupModal()" class="w-full bg-[#8b5cf6] text-white font-bold py-4 rounded-2xl transition shadow-lg shadow-purple-500/20 flex-shrink-0">Got it</button>
@@ -148,13 +148,13 @@
         <div class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#1e2831] w-[90%] max-w-[420px] p-8 rounded-3xl text-center">
           <div class="loading-spinner w-12 h-12 border-4 border-[#8b5cf6] border-t-transparent rounded-full mx-auto mb-6"></div>
-          <h2 class="text-2xl font-bold text-white mb-2">In Queue</h2>
+          <h2 class="text-2xl font-bold text-white mb-2">番目</h2>
           <p class="text-gray-400 mb-8">クラウド端末の空きを待っています...</p>
           <div class="grid grid-cols-2 gap-4 mb-8">
             <div class="bg-gray-800/50 rounded-2xl p-4"><span class="block text-xs text-gray-500 uppercase font-bold mb-1">Position</span><span id="queue-pos" class="text-2xl font-bold text-white">--</span></div>
             <div class="bg-gray-800/50 rounded-2xl p-4"><span class="block text-xs text-gray-500 uppercase font-bold mb-1">Est. Time</span><span id="queue-time" class="text-2xl font-bold text-white">--</span></div>
           </div>
-          <button onclick="App.cancelQueue()" class="w-full bg-gray-800 text-white font-bold py-4 rounded-2xl">Cancel Waiting</button>
+          <button onclick="App.cancelQueue()" class="w-full bg-gray-800 text-white font-bold py-4 rounded-2xl">キャンセル</button>
         </div>
       </div>
     </div>
