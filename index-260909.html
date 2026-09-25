@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang=ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -73,7 +73,7 @@
       <nav class="sticky top-0 z-50 bg-[#1e2831] border-b border-white/5 px-4 py-3 flex flex-col md:flex-row justify-between items-center gap-4">
         <div class="flex items-center justify-between w-full md:w-auto gap-4">
           <div class="flex items-center gap-2.5 group cursor-pointer">
-            <img src="https://cloudmoonapp.com/favicon.ico" class="w-8 h-8 rounded-lg" alt="Logo">
+            <img src="https://www.image2url.com/r2/default/images/1790294985959-da75b9de-b6ae-4269-a7a6-568cae43de94.png" class="w-8 h-8 rounded-lg" alt="Logo">
             <span class="hidden md:inline text-xl font-black tracking-tighter text-white">Cloud<span class="text-[#8b5cf6]">Moon</span></span>
           </div>
           <div class="flex items-center gap-3">
@@ -94,7 +94,7 @@
         </div>
       </nav>
       <section id="recent-games-section" class="max-w-7xl mx-auto px-4 py-6 hidden">
-        <div class="flex items-center justify-between mb-4"><h2 class="text-lg font-black text-white flex items-center gap-2"><i data-lucide="history" class="w-5 h-5 text-[#8b5cf6]"></i> Recently Played</h2></div>
+        <div class="flex items-center justify-between mb-4"><h2 class="text-lg font-black text-white flex items-center gap-2"><i data-lucide="history" class="w-5 h-5 text-[#8b5cf6]"></i> 最近プレイしたもの</h2></div>
         <div id="recent-games-grid" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4"></div>
       </section>
       <div id="category-bar" class="max-w-7xl mx-auto px-4 py-2 flex gap-2 overflow-x-auto no-scrollbar scroll-smooth"></div>
@@ -113,9 +113,9 @@
             <h2 class="text-2xl font-bold text-white">Sign In <span class="text-gray-600 font-normal mx-1">/</span> <button onclick="App.showSignupModal()" class="text-lg text-[#8b5cf6] font-semibold hover:underline transition inline">Sign Up</button></h2>
           </div>
           <div class="space-y-4 flex-1">
-            <div><label class="block text-xs font-bold text-gray-500 uppercase mb-2">Email Address</label><div class="relative"><i data-lucide="mail" class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500 pointer-events-none"></i><input type="email" id="login-email" class="login-input pl-11" placeholder="name@example.com"></div></div>
-            <div><label class="block text-xs font-bold text-gray-500 uppercase mb-2">Password</label><div class="relative"><i data-lucide="lock" class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500 pointer-events-none"></i><input type="password" id="login-password" class="login-input pl-11 pr-11" placeholder="••••••••" onkeydown="if(event.key==='Enter')App.handleLogin()"><button type="button" onclick="App.togglePasswordVisibility()" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-white transition-colors p-0.5" id="pw-toggle-btn"><i data-lucide="eye" class="w-4 h-4"></i></button></div></div>
-            <div><label class="block text-xs font-bold text-gray-500 uppercase mb-2">Region Server</label><select id="server-select" class="login-input cursor-pointer appearance-none pr-10" style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%239ca3af' d='M2 4l4 4 4-4'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:right 14px center"><option value="21">South America</option><option value="22">US West</option><option value="23" selected>US East</option><option value="3">Asia</option><option value="4">Europe</option></select></div>
+            <div><label class="block text-xs font-bold text-gray-500 uppercase mb-2">メールアドレス</label><div class="relative"><i data-lucide="mail" class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500 pointer-events-none"></i><input type="email" id="login-email" class="login-input pl-11" placeholder="name@example.com"></div></div>
+            <div><label class="block text-xs font-bold text-gray-500 uppercase mb-2">パスワード</label><div class="relative"><i data-lucide="lock" class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500 pointer-events-none"></i><input type="password" id="login-password" class="login-input pl-11 pr-11" placeholder="••••••••" onkeydown="if(event.key==='Enter')App.handleLogin()"><button type="button" onclick="App.togglePasswordVisibility()" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-white transition-colors p-0.5" id="pw-toggle-btn"><i data-lucide="eye" class="w-4 h-4"></i></button></div></div>
+            <div><label class="block text-xs font-bold text-gray-500 uppercase mb-2">サーバーを選択(Asiaがおすすめ)</label><select id="server-select" class="login-input cursor-pointer appearance-none pr-10" style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%239ca3af' d='M2 4l4 4 4-4'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:right 14px center"><option value="21">South America</option><option value="22">US West</option><option value="23" selected>US East</option><option value="3">Asia</option><option value="4">Europe</option></select></div>
           </div>
           <button id="login-submit-btn" onclick="App.handleLogin()" class="w-full bg-[#8b5cf6] text-white font-bold py-4 rounded-2xl transition shadow-lg shadow-purple-500/20 flex-shrink-0">Sign In</button>
         </div>
