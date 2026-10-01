@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
   <meta charset="utf-8">
@@ -1363,7 +1363,7 @@
       <div v-if="openMenu" class="sidebar-overlay" @click="openMenu = false"></div>
       <div class="sidebar" :class="{'sidebar-open':openMenu}">
         <div class="sidebar-button">
-          <div style="margin:auto 0;">Streaming Quality</div>
+          <div style="margin:auto 0;">画質</div>
           <div style="display: flex;align-items: center;">
             <select style="background:#42505b;color: #fff;height: 2rem;width: 4rem;border-radius: 4px;border: none;" v-model="quality" @change="changeQuality(quality)">
               <option value="HD">HD</option>
@@ -1385,17 +1385,17 @@
         </div>
         <div style="width: 100%;border: 1px #3f4c57 solid;margin-left: 1rem"></div>
         <div class="sidebar-button">
-          <div style="margin:auto 0;">Back Key</div>
+          <div style="margin:auto 0;">戻る</div>
           <div class="sidebar-button-btn" @click="sendDataChannelMessage('keycode>4')">Back</div>
         </div>
         <div style="width: 100%;border: 1px #3f4c57 solid;margin-left: 1rem"></div>
         <div class="sidebar-button">
-          <div style="margin:auto 0;">Restart App</div>
+          <div style="margin:auto 0;">再起動</div>
           <div class="sidebar-button-btn" @click="sendDataChannelMessage('game>restart')">Restart</div>
         </div>
         <div style="width: 100%;border: 1px #3f4c57 solid;margin-left: 1rem"></div>
         <div class="sidebar-button">
-          <div style="margin:auto 0;">Keyboard</div>
+          <div style="margin:auto 0;">キーボード</div>
           <label class="switch">
             <input type="checkbox" v-model="showKeyboard">
             <span class="slider"></span>
@@ -1459,8 +1459,8 @@
       </template>
       <div v-if="isEditKeyboard" class="keyboard-editor">
         <div class="editor-btn add-key-btn" @click="addKeyboardKey">+ Add Key</div>
-        <div class="editor-btn reset-btn" @click="resetKeyboardLayout">Reset</div>
-        <div class="editor-btn done-btn" @click="saveAndExitEdit">Save</div>
+        <div class="editor-btn reset-btn" @click="resetKeyboardLayout">リセット</div>
+        <div class="editor-btn done-btn" @click="saveAndExitEdit">保存</div>
       </div>
       <div v-if="!isEditKeyboard && currentGameConfig && currentGameConfig.pointerLock" class="keyboard-lock" :style="{ opacity: cursorLock ? 0.2 : 0.7 }">
         <span v-if="!cursorLock">Press "ctrl + m" to lock the mouse.</span>
