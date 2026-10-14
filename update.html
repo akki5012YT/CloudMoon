@@ -3,36 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ただいまメンテナンス中です</title>
+    <title>アップデート中 - CloudMoon</title>
     <style>
+        /* 1. 全体のリセットと背景色の設定 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #f7f9fa;
-            color: #333;
+            /* 添付画像のような暗い紺・黒系の背景色 */
+            background-color: #171d26; 
+            font-family: 'Helvetica Neue', Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+            color: #ffffff;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
+            position: relative;
+            overflow: hidden;
         }
-        .container {
+
+        /* 2. 左上のロゴ配置エリア */
+        .header-logo {
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            width: 150px; /* ロゴの幅（必要に応じて調整してください） */
+            height: 40px;  /* ロゴの高さ（必要に応じて調整してください） */
+            /* ↓↓↓ 下記のURLを、ご自身のロゴ画像URLに書き換えてください ↓↓↓ */
+            background-image: url("https://example.com");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: left center;
+        }
+
+        /* 3. 中央のテキスト配置エリア */
+        .content-box {
             text-align: center;
-            padding: 40px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            padding: 20px;
         }
-        h1 { font-size: 24px; color: #e67e22; margin-bottom: 20px; }
-        p { font-size: 16px; line-height: 1.6; color: #666; }
+
+        /* 4. 「アップデート中」のテキストデザイン */
+        .update-text {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: #ffffff;
+            /* ほんのり文字を光らせるエフェクト（暗い背景に映えます） */
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3); 
+        }
+        
+        .sub-text {
+            margin-top: 12px;
+            font-size: 14px;
+            color: #8fa0b5; /* 少しトーンを落としたグレー */
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>ただいまシステムメンテナンス中です</h1>
-        <p>いつもご利用いただきありがとうございます。<br>
-        現在、サービスのアップデート（更新作業）を行っております。</p>
-        <p><strong>【作業予定時間】 2026年10月14日 10:00 〜 12:00</strong></p>
-        <p>ご不便をおかけしますが、しばらく時間を置いてから再度アクセスしてください。</p>
+
+    <!-- 左上のロゴ（CSS側のurl部分で画像を指定してください） -->
+    <div class="header-logo"></div>
+
+    <!-- 中央のアップデート中メッセージ -->
+    <div class="content-box">
+        <h1 class="update-text">アップデート中</h1>
+        <p class="sub-text">しばらくしてから再度アクセスしてください。</p>
     </div>
+
 </body>
 </html>
