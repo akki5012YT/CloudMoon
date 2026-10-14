@@ -1375,12 +1375,12 @@
         </div>
         <div style="width: 100%;border: 1px #3f4c57 solid;margin-left: 1rem"></div>
         <div class="sidebar-button">
-          <div style="margin:auto 0;">Page Orientation</div>
+          <div style="margin:auto 0;">画面を回転</div>
           <div class="sidebar-button-btn" @click="isRotateScreen=!isRotateScreen">↻</div>
         </div>
         <div style="width: 100%;border: 1px #3f4c57 solid;margin-left: 1rem"></div>
         <div class="sidebar-button">
-          <div style="margin:auto 0;">Rotate Game</div>
+          <div style="margin:auto 0;">よくわからん</div>
           <div class="sidebar-button-btn" @click="rotateScreenDC()">↻</div>
         </div>
         <div style="width: 100%;border: 1px #3f4c57 solid;margin-left: 1rem"></div>
@@ -1403,7 +1403,7 @@
         </div>
         <div style="width: 100%;border: 1px #3f4c57 solid;margin-left: 1rem"></div>
         <div class="sidebar-button">
-          <div style="margin:auto 0;">Keyboard Edit</div>
+          <div style="margin:auto 0;">キーボードを編集</div>
           <div v-if="!isEditKeyboard" class="sidebar-button-btn" @click="enterEditMode">Edit</div>
           <div v-else style="display: flex; gap: 5px;">
             <div class="sidebar-button-btn" style="background: #4b5563; width: auto; padding: 0 8px;" @click="resetKeyboardLayout">Reset</div>
@@ -1458,7 +1458,7 @@
         </template>
       </template>
       <div v-if="isEditKeyboard" class="keyboard-editor">
-        <div class="editor-btn add-key-btn" @click="addKeyboardKey">+ Add Key</div>
+        <div class="editor-btn add-key-btn" @click="addKeyboardKey">+ キーを追加する</div>
         <div class="editor-btn reset-btn" @click="resetKeyboardLayout">リセット</div>
         <div class="editor-btn done-btn" @click="saveAndExitEdit">保存</div>
       </div>
