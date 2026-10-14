@@ -110,7 +110,7 @@
         <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="App.closeLoginModal()"></div>
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#1e2831] w-[90%] max-w-[420px] min-h-[480px] p-8 rounded-3xl border border-white/10 flex flex-col">
           <div class="flex items-center justify-between mb-6 flex-shrink-0">
-            <h2 class="text-2xl font-bold text-white">Sign In <span class="text-gray-600 font-normal mx-1">/</span> <button onclick="App.showSignupModal()" class="text-lg text-[#8b5cf6] font-semibold hover:underline transition inline">Sign Up</button></h2>
+            <h2 class="text-2xl font-bold text-white">サインイン <span class="text-gray-600 font-normal mx-1">/</span> <button onclick="App.showSignupModal()" class="text-lg text-[#8b5cf6] font-semibold hover:underline transition inline">Sign Up</button></h2>
           </div>
           <div class="space-y-4 flex-1">
             <div><label class="block text-xs font-bold text-gray-500 uppercase mb-2">Email Address</label><div class="relative"><i data-lucide="mail" class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500 pointer-events-none"></i><input type="email" id="login-email" class="login-input pl-11" placeholder="name@example.com"></div></div>
@@ -130,7 +130,7 @@
           <div class="space-y-5 flex-1">
             <div class="flex items-start gap-4">
               <div class="w-8 h-8 rounded-full bg-[#8b5cf6]/20 flex items-center justify-center flex-shrink-0"><span class="text-sm font-black text-[#8b5cf6]">1</span></div>
-              <p class="text-sm font-semibold text-white leading-8">でサインイン <span class="font-black bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-green-400">Google</span>.</p>
+              <p class="text-sm font-semibold text-white leading-8">サインイン <span class="font-black bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-green-400">Google</span>.</p>
             </div>
             <div class="flex items-start gap-4">
               <div class="w-8 h-8 rounded-full bg-[#8b5cf6]/20 flex items-center justify-center flex-shrink-0"><span class="text-sm font-black text-[#8b5cf6]">2</span></div>
@@ -138,7 +138,7 @@
             </div>
             <div class="flex items-start gap-4">
               <div class="w-8 h-8 rounded-full bg-[#8b5cf6]/20 flex items-center justify-center flex-shrink-0"><span class="text-sm font-black text-[#8b5cf6]">3</span></div>
-              <p class="text-sm font-semibold text-white leading-8">これで、あなたのメールアドレスとパスワードを使って、両方のサイトにログインできるようになりました！</p>
+              <p class="text-sm font-semibold text-white leading-8">これで、あなたのメールアドレスとパスワードを使って、サイトにログインできるようになりました！</p>
             </div>
           </div>
           <button onclick="App.closeSignupModal()" class="w-full bg-[#8b5cf6] text-white font-bold py-4 rounded-2xl transition shadow-lg shadow-purple-500/20 flex-shrink-0">Got it</button>
@@ -151,7 +151,7 @@
           <h2 class="text-2xl font-bold text-white mb-2">お待ちください...</h2>
           <p class="text-gray-400 mb-8">クラウド端末の空きを待っています...</p>
           <div class="grid grid-cols-2 gap-4 mb-8">
-            <div class="bg-gray-800/50 rounded-2xl p-4"><span class="block text-xs text-gray-500 uppercase font-bold mb-1">番目</span><span id="queue-pos" class="text-2xl font-bold text-white">--</span></div>
+            <div class="bg-gray-800/50 rounded-2xl p-4"><span class="block text-xs text-gray-500 uppercase font-bold mb-1">順番</span><span id="queue-pos" class="text-2xl font-bold text-white">--</span></div>
             <div class="bg-gray-800/50 rounded-2xl p-4"><span class="block text-xs text-gray-500 uppercase font-bold mb-1">待ち時間</span><span id="queue-time" class="text-2xl font-bold text-white">--</span></div>
           </div>
           <button onclick="App.cancelQueue()" class="w-full bg-gray-800 text-white font-bold py-4 rounded-2xl">キャンセル</button>
