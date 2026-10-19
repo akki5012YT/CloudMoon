@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang=ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -85,7 +85,7 @@
         <div class="flex items-center w-full max-w-xl">
           <div class="relative w-full group">
             <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500"></i>
-            <input type="text" id="search-input" placeholder="Discovery your next game..." class="w-full h-10 bg-gray-800 border border-white/5 rounded-xl pl-11 pr-4 text-sm text-white placeholder-gray-500 focus:ring-2 focus:ring-[#8b5cf6]/30 transition-all outline-none" oninput="App.handleSearch(this.value)">
+            <input type="text" id="search-input" placeholder="ゲームを検索..." class="w-full h-10 bg-gray-800 border border-white/5 rounded-xl pl-11 pr-4 text-sm text-white placeholder-gray-500 focus:ring-2 focus:ring-[#8b5cf6]/30 transition-all outline-none" oninput="App.handleSearch(this.value)">
           </div>
         </div>
         <div class="flex items-center gap-3">
@@ -94,7 +94,7 @@
         </div>
       </nav>
       <section id="recent-games-section" class="max-w-7xl mx-auto px-4 py-6 hidden">
-        <div class="flex items-center justify-between mb-4"><h2 class="text-lg font-black text-white flex items-center gap-2"><i data-lucide="history" class="w-5 h-5 text-[#8b5cf6]"></i> Recently Played</h2></div>
+        <div class="flex items-center justify-between mb-4"><h2 class="text-lg font-black text-white flex items-center gap-2"><i data-lucide="history" class="w-5 h-5 text-[#8b5cf6]"></i>最近プレイしたもの</h2></div>
         <div id="recent-games-grid" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4"></div>
       </section>
       <div id="category-bar" class="max-w-7xl mx-auto px-4 py-2 flex gap-2 overflow-x-auto no-scrollbar scroll-smooth"></div>
@@ -110,20 +110,20 @@
         <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="App.closeLoginModal()"></div>
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#1e2831] w-[90%] max-w-[420px] min-h-[480px] p-8 rounded-3xl border border-white/10 flex flex-col">
           <div class="flex items-center justify-between mb-6 flex-shrink-0">
-            <h2 class="text-2xl font-bold text-white">Sign In <span class="text-gray-600 font-normal mx-1">/</span> <button onclick="App.showSignupModal()" class="text-lg text-[#8b5cf6] font-semibold hover:underline transition inline">Sign Up</button></h2>
+            <h2 class="text-2xl font-bold text-white">Sign In <span class="text-gray-600 font-normal mx-1">/</span> <button onclick="App.showSignupModal()" class="text-lg text-[#8b5cf6] font-semibold hover:underline transition inline">登録</button></h2>
           </div>
           <div class="space-y-4 flex-1">
             <div><label class="block text-xs font-bold text-gray-500 uppercase mb-2">Email Address</label><div class="relative"><i data-lucide="mail" class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500 pointer-events-none"></i><input type="email" id="login-email" class="login-input pl-11" placeholder="name@example.com"></div></div>
             <div><label class="block text-xs font-bold text-gray-500 uppercase mb-2">Password</label><div class="relative"><i data-lucide="lock" class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500 pointer-events-none"></i><input type="password" id="login-password" class="login-input pl-11 pr-11" placeholder="••••••••" onkeydown="if(event.key==='Enter')App.handleLogin()"><button type="button" onclick="App.togglePasswordVisibility()" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-white transition-colors p-0.5" id="pw-toggle-btn"><i data-lucide="eye" class="w-4 h-4"></i></button></div></div>
             <div><label class="block text-xs font-bold text-gray-500 uppercase mb-2">Region Server</label><select id="server-select" class="login-input cursor-pointer appearance-none pr-10" style="background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%239ca3af' d='M2 4l4 4 4-4'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:right 14px center"><option value="21">South America</option><option value="22">US West</option><option value="23" selected>US East</option><option value="3">Asia</option><option value="4">Europe</option></select></div>
           </div>
-          <button id="login-submit-btn" onclick="App.handleLogin()" class="w-full bg-[#8b5cf6] text-white font-bold py-4 rounded-2xl transition shadow-lg shadow-purple-500/20 flex-shrink-0">Sign In</button>
+          <button id="login-submit-btn" onclick="App.handleLogin()" class="w-full bg-[#8b5cf6] text-white font-bold py-4 rounded-2xl transition shadow-lg shadow-purple-500/20 flex-shrink-0">ログイン</button>
         </div>
       </div>
       <div id="signup-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:250;">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#1e2831] w-[90%] max-w-[420px] min-h-[480px] p-8 rounded-3xl border border-white/10 flex flex-col">
           <div class="flex items-center justify-between mb-6">
-            <h2 class="text-2xl font-bold text-white">Create Account</h2>
+            <h2 class="text-2xl font-bold text-white">アカウントを作る</h2>
             <button onclick="App.closeSignupModal()" class="p-1.5 hover:bg-gray-800 rounded-lg transition"><i data-lucide="x" class="w-5 h-5 text-gray-500"></i></button>
           </div>
           <p class="text-sm text-gray-400 mb-6 leading-relaxed flex-shrink-0">To create an account, please visit our main site <a href="https://web.cloudmoonapp.com" target="_blank" class="text-[#8b5cf6] font-semibold hover:underline">web.cloudmoonapp.com</a> and follow these steps:</p>
@@ -148,13 +148,13 @@
         <div class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#1e2831] w-[90%] max-w-[420px] p-8 rounded-3xl text-center">
           <div class="loading-spinner w-12 h-12 border-4 border-[#8b5cf6] border-t-transparent rounded-full mx-auto mb-6"></div>
-          <h2 class="text-2xl font-bold text-white mb-2">In Queue</h2>
-          <p class="text-gray-400 mb-8">Waiting for an available cloud device...</p>
+          <h2 class="text-2xl font-bold text-white mb-2">待機中...</h2>
+          <p class="text-gray-400 mb-8">有効なクラウド端末を待っています...</p>
           <div class="grid grid-cols-2 gap-4 mb-8">
-            <div class="bg-gray-800/50 rounded-2xl p-4"><span class="block text-xs text-gray-500 uppercase font-bold mb-1">Position</span><span id="queue-pos" class="text-2xl font-bold text-white">--</span></div>
-            <div class="bg-gray-800/50 rounded-2xl p-4"><span class="block text-xs text-gray-500 uppercase font-bold mb-1">Est. Time</span><span id="queue-time" class="text-2xl font-bold text-white">--</span></div>
+            <div class="bg-gray-800/50 rounded-2xl p-4"><span class="block text-xs text-gray-500 uppercase font-bold mb-1">順番/span><span id="queue-pos" class="text-2xl font-bold text-white">--</span></div>
+            <div class="bg-gray-800/50 rounded-2xl p-4"><span class="block text-xs text-gray-500 uppercase font-bold mb-1">待ち時間</span><span id="queue-time" class="text-2xl font-bold text-white">--</span></div>
           </div>
-          <button onclick="App.cancelQueue()" class="w-full bg-gray-800 text-white font-bold py-4 rounded-2xl">Cancel Waiting</button>
+          <button onclick="App.cancelQueue()" class="w-full bg-gray-800 text-white font-bold py-4 rounded-2xl">キャンセル</button>
         </div>
       </div>
     </div>
